@@ -1,0 +1,54 @@
+{
+  "name": "video-probe-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that inspects video files with ffprobe, checks them against Instagram, TikTok, YouTube, X and LinkedIn specs, and conforms them for upload.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "video-probe-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', 0o755)\"",
+    "start": "node dist/index.js",
+    "test": "node --test test/*.test.mjs",
+    "inspect": "npx -y @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ffprobe",
+    "ffmpeg",
+    "video",
+    "creator-tools",
+    "instagram-reels",
+    "youtube-shorts",
+    "tiktok",
+    "claude"
+  ],
+  "author": "Anshuman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshumanofficial2002-cpu/video-probe-mcp.git"
+  },
+  "homepage": "https://github.com/anshumanofficial2002-cpu/video-probe-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/anshumanofficial2002-cpu/video-probe-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}
